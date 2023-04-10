@@ -7,14 +7,14 @@
                     <img src="./../../../assets/logo.png" width="120px" height="120px" class="logo"/>
                 </div>
                 <h1 class="text-center">Login Here!!</h1>
-                <form>
+                <form (ngSubmit)="onLogin()">
                     <mat-form-field appearance="outline" class="full-width">
                         <mat-label>Username</mat-label>
-                        <input matInput placeholder="Enter the Username" name="username" required>
+                        <input matInput placeholder="Enter the Username" name="username" [(ngModel)]="loginDetails.username" name="username" required>
                       </mat-form-field>
                     <mat-form-field appearance="outline" class="full-width">
                         <mat-label>Password</mat-label>
-                        <input type="password" matInput placeholder="Enter the Password" name="password" required>
+                        <input type="password" matInput placeholder="Enter the Password" name="password" [(ngModel)]="loginDetails.password" name="password" required>
                       </mat-form-field>
                       <div class="container text-center">
                         <button type="reset" mat-raised-button color="accent" class="mr20 mb20">Clear</button>
