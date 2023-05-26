@@ -39,7 +39,7 @@ export class SignupComponent {
       },
       (error)=>{
         console.log(error);
-        this.snack.open("Something went wrong !!","",{
+        this.snack.open(error.error,"",{
           duration:3000
         });
         //error
